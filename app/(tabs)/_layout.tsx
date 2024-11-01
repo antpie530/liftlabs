@@ -1,37 +1,41 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
+import TabBar from "@/components/TabBar/TabBar";
+import { Tabs } from "expo-router";
+import Entypo from '@expo/vector-icons/Entypo';
+import { COLORS } from "@/constants/Colors";
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
-  return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
+export default function TabsLayout() {
+    return (
+        <Tabs 
+            screenOptions={{ 
+                headerShown: false,
+            }}
+            tabBar={(props) => <TabBar {...props} />}
+        >
+            <Tabs.Screen 
+                name="Analyze"
+                options={{
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Entypo name="line-graph" size={24} color={color} />
+                    )
+                }}
+            />
+            <Tabs.Screen 
+                name="index" 
+                options={{ 
+                    title: "Track",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Entypo name="pencil" size={24} color={color} />
+                    )
+                }} 
+            />
+            <Tabs.Screen
+                name="Build"
+                options={{
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Entypo name="tools" size={24} color={color} />
+                    )
+                }}
+            />
+        </Tabs>
+    )
 }

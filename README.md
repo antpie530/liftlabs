@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# lift labs
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Made with React Native](https://img.shields.io/badge/made%20with-react%20native-61DAFB?logo=react)
+![Made with Expo](https://img.shields.io/badge/made%20with-expo-1f72ff?logo=expo)
+![Made with TypeScript](https://img.shields.io/badge/made%20with-typescript-007ACC?logo=typescript)
 
-## Get started
+> **lift labs** is currently in Beta. To join as an early adopter and help shape the technology, sign up for the waitlist on our
+[landing page](https://www.liftlabs.dev).
 
-1. Install dependencies
+Build, Track and Analyze your training programs to achieve your goals.
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- **Build**
+    - Custom Exercises
+    - Custom Workouts
+    - Custom Programs
 
-   ```bash
-    npx expo start
-   ```
+- **Track**
+    - Track Every Workout
+    - Track Every Set
+    - Track Every Goal
 
-In the output, you'll find options to open the app in a
+- **Analyze**
+    - Custom Dashboard
+    - Custom KPIs
+    - Custom Visualizations
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation
+To install the project, follow these steps:
+1. **Clone the Repository**  
+First, clone the project from the GitHub repository: 
+ 
+    ```
+    git clone https://github.com/antpie530/liftlabs.git
+    ```
+2. **Navigate to the Project Directory**  
+Move into the project folder:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+    ```
+    cd liftlabs
+    ```
+3. **Install Dependencies**  
+Install the dependencies:
+    ```
+    npm i
+    ```
+4. **Install the Expo Go App**  
+Download and install the Expo Go app on your mobile device. You can find it on the [App Store](https://apps.apple.com/us/app/expo-go/id982107779) or [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US&pli=1).
 
-## Get a fresh project
+5. **Run the App**  
+There are two ways to run the app, depending on your network setup:  
+    - Same Network:
+    If both your development machine and mobile device are on the same network, run:  
+        ```
+        npx expo start
+        ```  
+    - Different Networks:
+    If your devices are on different networks, run:
+        ```
+        npx expo start --tunnel
+        ```
+6. **Scan the QR Code**  
+Once the project is running, scan the QR code displayed in your terminal using the Expo Go app. This will download the project to your device, allowing you to start using the app.
 
-When you're ready, run:
+## Tech Stack
+**lift labs** uses the following stack to build the app:
 
-```bash
-npm run reset-project
-```
+- **[React Native](https://reactnative.dev/)**
+    - Powers the app as a native, cross-platform solution, using a component-based architecture that simplifies development and makes it easier to scale.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- **[Expo](https://docs.expo.dev/)**
+    - Handles the complexities of mobile development, simplifying configurations for native modules, deployment, and testing distribution. Expo offers specific native bindings and streamlines many tasks that would otherwise take considerable time to implement manually.
 
-## Learn more
+- **[TypeScript](https://www.typescriptlang.org/)**
+    - Adds static typing to JavaScript, helping to catch errors early and reducing bugs. It encourages a more thoughtful approach to code structure, making development smoother and the codebase more reliable.
 
-To learn more about developing your project with Expo, look at the following resources:
+- **[SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/)**
+    - Provides an on-device relational database solution, ensuring rapid data access and user data privacy. With SQLite, all data is stored locally, giving users full control over their information without any external dependencies.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- **[Drizzle](https://orm.drizzle.team/)**
+    - A headless ORM that accelerates and simplifies data management, making it easier to handle, build, and debug data interactions efficiently.

@@ -1,7 +1,7 @@
 import { View } from "react-native";
 
-export default function Track() {
+export default function Program() {
     return (
-        <View />
+        <View></View>
     )
 }
